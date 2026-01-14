@@ -140,6 +140,12 @@ This simulates a real-world ML inference pipeline.
 
 ---
 
+## 🚀 Live Demo
+
+👉 https://sonar-rock-vs-mine.streamlit.app/
+
+---
+
 ## 🚀 How to Run the Project
 
 ### 1️⃣ Clone the repository
