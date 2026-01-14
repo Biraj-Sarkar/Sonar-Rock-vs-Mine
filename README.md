@@ -1,10 +1,18 @@
 # Sonar Rock vs Mine Prediction 🛥️⚓
 
-## 📌 Project Overview
-This project implements a **machine learning–based classification system** to predict whether an underwater object detected by sonar signals is a **Rock** or a **Mine**.  
-The model is trained on numerical sonar signal features and evaluated using multiple classification algorithms.
+A complete **end-to-end Machine Learning project** that classifies underwater objects as **Rock** or **Mine** using sonar signal data, and is deployed as an **interactive Streamlit web application**.
 
-The project demonstrates a **complete end-to-end ML workflow**, from data preprocessing to model comparison and batch prediction.
+
+## 📌 Project Overview
+Sonar systems are widely used to detect underwater objects, but distinguishing **mines** from **rocks** is challenging due to similar sonar reflections.  
+This project applies **machine learning classification techniques** to solve this problem using numerical sonar signal features.
+
+The project covers:
+- Data analysis and preprocessing
+- Model training and evaluation
+- Model comparison
+- Batch prediction using CSV files
+- Deployment using **Streamlit**
 
 ---
 
@@ -41,6 +49,7 @@ Each row corresponds to one sonar observation.
 - **Matplotlib**
 - **Scikit-learn**
 - **Jupyter Notebook**
+- **Streamlit**
 
 ---
 
@@ -78,6 +87,10 @@ Each row corresponds to one sonar observation.
    - Batch prediction using CSV input
    - Outputs predictions and confidence scores to a new CSV file
 
+8. **Deployment**
+   - Deployed as a Streamlit web application
+   - Users can upload CSV files and download predictions
+
 ---
 
 ## 📈 Model Comparison Summary
@@ -108,9 +121,81 @@ This simulates a real-world ML inference pipeline.
 
 ---
 
+## 🌐 Streamlit Web Application
+
+### Features
+- Upload a CSV file containing **60 sonar features**
+- Automatic validation of input format
+- Predicts **Rock / Mine** for each sample
+- Displays **Mine probability (confidence)**
+- Download predictions as a CSV file
+
+### Input Format
+- CSV file with **exactly 60 columns**
+- No target/label column required
+
+### Output
+- Prediction (`Rock` / `Mine`)
+- Probability of Mine for each sample
+
+---
+
 ## 🚀 How to Run the Project
 
-Clone the repository:
-   ```bash
-   git clone https://github.com/Biraj-Sarkar/Sonar-Rock-vs-Mine.git
-   ```
+### 1️⃣ Clone the repository
+```bash
+git clone https://github.com/Biraj-Sarkar/Sonar-Rock-vs-Mine.git
+cd Sonar-Rock-vs-Mine
+```
+
+### 2️⃣ Install dependencies
+```bash
+pip install -r requirements.txt
+```
+
+### 3️⃣ Run the Streamlit app
+```bash
+streamlit run app.py
+```
+
+---
+
+## 📂 Project Structure
+sonar-rock-vs-mine/
+│
+├── app.py                    # Streamlit application
+├── sonar_model.pkl           # Trained ML model
+├── scaler.pkl                # Feature scaler
+├── requirements.txt
+├── README.md
+└── sonar_rock_vs_mine.ipynb  # Development notebook
+
+---
+
+## ✅ Key Learnings
+* Built a complete ML pipeline from data to deployment
+* Understood model behavior through comparison
+* Implemented batch prediction using real-world CSV input
+* Deployed an ML model as an interactive web application
+* Debugged real-world Python and ML issues
+
+---
+
+## 🔮 Future Enhancements
+* Hyperparameter tuning and cross-validation
+* Model selection inside the Streamlit app
+* Single-sample manual input UI
+* Cloud deployment with persistent storage
+* Authentication and logging
+
+---
+
+## 👤 Author
+
+Biraj Sarkar  
+B.Tech in Computer Science and Engineering  
+IIT Guwahati  
+
+## 📜 License
+
+This project is intended for educational and academic purposes.
